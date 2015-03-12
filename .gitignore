@@ -24,3 +24,10 @@ proguard/
 
 # Log Files
 *.log
+
+# Project Files
+/.idea/workspace.xml
+/.idea/libraries
+
+.DS_Store
+/build
