@@ -23,4 +23,8 @@
     <string name="login_error_title">Try Again</string>
     <string name="title_activity_main_activity2">MainActivity2Activity</string>
     <string name="action_logout">Logout</string>
+    <string name="forgot_password_text">Forgot Password?</string>
+    <string name="title_activity_password_reset">PasswordResetActivity</string>
+    <string name="reset_password_instructions">To reset your password, enter the email address you signed up with and tap \"Reset Password\". A password reset link will be sent to your inbox.</string>
+    <string name="reset_password_button_text">Reset Password</string>
 </resources>
