@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.davidwestberry.ribbit" >
-
-    <!-- To access Google+ APIs: -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--
  To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
      option is required to comply with the Google+ Sign-In developer policies
     -->
@@ -14,6 +10,11 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:name=".RibbitApplication"
@@ -22,8 +23,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.MainActivity"
             android:label="@string/app_name"
+            android:parentActivityName=".UI.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,21 +34,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".UI.LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.davidwestberry.ribbit.MainActivity" />
-        </activity>
-        <activity
-            android:name=".SignUpActivity"
-            android:label="@string/title_activity_sign_up"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".UI.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.davidwestberry.ribbit.LoginActivity" />
+                android:value=".UI.MainActivity" />
+        </activity>
+        <activity
+            android:name=".UI.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName=".UI.LoginActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UI.LoginActivity" />
         </activity>
 
         <meta-data
@@ -54,12 +57,40 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".PasswordResetActivity"
+            android:name=".UI.PasswordResetActivity"
             android:label="@string/title_activity_password_reset"
-            android:parentActivityName=".LoginActivity" >
+            android:parentActivityName=".UI.LoginActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.davidwestberry.ribbit.LoginActivity" />
+                android:value=".UI.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".UI.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:parentActivityName=".UI.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UI.MainActivity" />
+        </activity>
+        <activity
+            android:name=".UI.RecipientsActivity"
+            android:label="@string/title_activity_recipients"
+            android:parentActivityName=".UI.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".UI.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ViewImageActivity"
+            android:label="@string/title_activity_view_image"
+            android:parentActivityName=".UI.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.davidwestberry.ribbit.UI.MainActivity" />
         </activity>
     </application>
 
