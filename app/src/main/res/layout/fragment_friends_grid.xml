@@ -3,18 +3,25 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.davidwestberry.ribbit.UI.FriendsFragment">
+             tools:context="com.davidwestberry.ribbit.ui.FriendsFragment">
 
     <GridView
-        android:id="@android:id/list"
+        android:id="@+id/friendsGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="2"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:numColumns="3"
+        android:horizontalSpacing="@dimen/user_grid_spacing"
+        android:verticalSpacing="@dimen/user_grid_spacing"
+        android:clipToPadding="true">
+    </GridView>
 
     <TextView
         android:id="@android:id/empty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:text="@string/empty_friends_text"
         android:gravity="center"/>
 
 </FrameLayout>

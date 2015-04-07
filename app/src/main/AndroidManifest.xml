@@ -19,13 +19,13 @@
     <application
         android:name=".RibbitApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.Ribbit" >
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".UI.MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,22 +34,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UI.LoginActivity"
+            android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".UI.MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.MainActivity" />
+                android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".UI.SignUpActivity"
+            android:name=".ui.SignUpActivity"
             android:label="@string/title_activity_sign_up"
-            android:parentActivityName=".UI.LoginActivity"
+            android:parentActivityName=".ui.LoginActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.LoginActivity" />
+                android:value=".ui.LoginActivity" />
         </activity>
 
         <meta-data
@@ -57,40 +57,39 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".UI.PasswordResetActivity"
+            android:name=".ui.PasswordResetActivity"
             android:label="@string/title_activity_password_reset"
-            android:parentActivityName=".UI.LoginActivity"
+            android:parentActivityName=".ui.LoginActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.LoginActivity" />
+                android:value=".ui.LoginActivity" />
         </activity>
         <activity
-            android:name=".UI.EditFriendsActivity"
+            android:name=".ui.EditFriendsActivity"
             android:label="@string/title_activity_edit_friends"
-            android:parentActivityName=".UI.MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.MainActivity" />
+                android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".UI.RecipientsActivity"
+            android:name=".ui.RecipientsActivity"
             android:label="@string/title_activity_recipients"
-            android:parentActivityName=".UI.MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".UI.MainActivity" />
+                android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".ViewImageActivity"
-            android:label="@string/title_activity_view_image"
-            android:parentActivityName=".UI.MainActivity"
-            android:screenOrientation="portrait" >
+            android:name=".ui.ViewImageActivity"
+            android:label="Image"
+            android:parentActivityName=".ui.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.davidwestberry.ribbit.UI.MainActivity" />
+                android:value="com.davidwestberry.ribbit.ui.MainActivity" />
         </activity>
     </application>
 
