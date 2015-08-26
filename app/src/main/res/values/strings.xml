@@ -57,4 +57,7 @@
     <string name="sender_name_placeholder_text">SenderName</string>
     <string name="content_desc_user_avatar">User Avatar</string>
     <string name="empty_friends_text">Please add friends first</string>
+    <string name="content_desc_user_checkmark">User Checkmark</string>
+    <string name="empty_users_text">There are no users to display</string>
+    <string name="push_message">"You have a new Ribbit message from %s!"</string>
 </resources>
